@@ -10,6 +10,10 @@ import hotelRouter from './routes/hotel.route'
 
 // Import models
 import { initHotel } from './models/Hotel'
+import { initUser } from './models/User'
+import { initHotelFacilities } from './models/HotelFacilities'
+import { initHotelRoom } from './models/HotelRoom'
+import { initBooking } from './models/Booking'
 
 const PORT = 8175
 const app = express()
@@ -34,12 +38,17 @@ const sequelize = new Sequelize(
 
 // Initialize models
 initHotel(sequelize)
+initUser(sequelize)
+initHotelRoom(sequelize)
+initHotelFacilities(sequelize)
+initBooking(sequelize)
 
 // Initialize database
 // import  populateDb  from './utils/populate'
+
 sequelize
     .sync({
-        // force: true, //! Uncomment the first time, Error: createdAd camelCase
+        // force: true, //! Uncomment the first time
     })
     .then(() => {
         // populateDb()

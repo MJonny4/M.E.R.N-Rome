@@ -1,20 +1,19 @@
 import { DataTypes, Model, Sequelize } from 'sequelize'
 
-class Hotel extends Model {
+class User extends Model {
     public id!: number
     public name!: string
-    public description!: string
-    public stars!: number
-    public address!: string
-    public city!: string
-    public country!: string
-    public phone!: string
+    public surname!: string
     public email!: string
-    public photos!: string[]
+    public phone!: string
+    public password!: string
+    public gender!: string
+    public birthday!: Date
+    public role!: string
 }
 
-export const initHotel = (sequelize: Sequelize) => {
-    Hotel.init(
+export const initUser = (sequelize: Sequelize) => {
+    User.init(
         {
             id: {
                 type: DataTypes.UUID,
@@ -25,27 +24,7 @@ export const initHotel = (sequelize: Sequelize) => {
                 type: new DataTypes.STRING(256),
                 allowNull: false,
             },
-            description: {
-                type: new DataTypes.STRING(1024),
-                allowNull: false,
-            },
-            stars: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
-            },
-            address: {
-                type: new DataTypes.STRING(256),
-                allowNull: false,
-            },
-            city: {
-                type: new DataTypes.STRING(256),
-                allowNull: false,
-            },
-            country: {
-                type: new DataTypes.STRING(256),
-                allowNull: false,
-            },
-            phone: {
+            surname: {
                 type: new DataTypes.STRING(256),
                 allowNull: false,
             },
@@ -53,17 +32,33 @@ export const initHotel = (sequelize: Sequelize) => {
                 type: new DataTypes.STRING(256),
                 allowNull: false,
             },
-            photos: {
-                type: DataTypes.ARRAY(DataTypes.STRING),
+            phone: {
+                type: new DataTypes.STRING(256),
+                allowNull: false,
+            },
+            password: {
+                type: new DataTypes.STRING(256),
+                allowNull: false,
+            },
+            gender: {
+                type: new DataTypes.STRING(256),
+                allowNull: false,
+            },
+            birthday: {
+                type: DataTypes.DATE,
+                allowNull: false,
+            },
+            role: {
+                type: new DataTypes.STRING(256),
                 allowNull: false,
             },
         },
         {
-            tableName: 'hotels',
-            sequelize: sequelize, // this bit is important
+            sequelize,
+            tableName: 'users',
             timestamps: true,
         }
     )
 }
 
-export default Hotel
+export default User
