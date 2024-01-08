@@ -9,6 +9,10 @@
         "outDir": "./dist",
         "rootDir": "./api"
     },
-    "include": ["api/**/*.ts"],
-    "exclude": ["node_modules"]
+    "include": [
+        "api/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
