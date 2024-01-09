@@ -37,6 +37,7 @@ config.json
 /tmp
 pnpm-lock.yaml
 .pnpm
+.vscode
 
 # Optional REPL history
 .node_repl_history
