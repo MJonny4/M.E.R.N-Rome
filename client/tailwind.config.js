@@ -4,13 +4,15 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				montserrat: ["Montserrat", "sans-serif"],
-				lora: ["Lora", "serif"],
 				satisfy: ["Satisfy", "cursive"],
+				roboto: ["Roboto Slab", "serif"],
 			},
 			colors: {
 				roma1: "hsl(351, 64%, 34%)",
-				roma: "	hsl(42, 85%, 60%)",
+				roma2: "hsl(42, 85%, 60%)",
+			},
+			backgroundImage: {
+				separator: "url('./src/assets/images/separator.png')",
 			},
 		},
 	},
