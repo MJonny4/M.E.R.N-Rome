@@ -1,9 +1,9 @@
-import MStep1 from "../components/mobile/MStep1";
+// import MStep1 from "../components/mobile/MStep1";
 import DStep1 from "../components/desktop/DStep1";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-	const [isMobile, setIsMobile] = useState(false);
+	// const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
