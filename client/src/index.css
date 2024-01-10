@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-color: hsl(120, 17%, 95%);
+    background-color: hwb(0 98% 2%);
 }
 
 header {

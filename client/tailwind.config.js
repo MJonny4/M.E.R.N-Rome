@@ -13,6 +13,7 @@ export default {
 			},
 			backgroundImage: {
 				separator: "url('./src/assets/images/separator.png')",
+				marcoAurelio: "url('./src/assets/images/form.jpg')",
 			},
 		},
 	},
