@@ -20,6 +20,7 @@ export default function Home() {
 	return (
 		<main className="px-16 w-full">
 			{/* <MStep1 /> */}
+
 			{/* TODO: DO DESKTOP VERSION */}
 			<DStep1 />
 		</main>
