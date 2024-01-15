@@ -10,7 +10,7 @@ export default function DStep1() {
 			>
 				<div className="overlay absolute top-0 left-0 w-full h-full bg-rose-900 bg-opacity-50 z-10"></div>
 				<div className="relative h-full flex flex-row justify-center gap-2 z-20">
-					<div className="border-t-4 mt-6 w-20"> </div>
+					<div className="border-t-4 mt-6 w-20"></div>
 					<p className="text-semibold text-5xl text-white text-center pl-4">
 						PLAN YOUR{" "}
 						<span className="font-satisfy text-roma2 text-6xl pl-2">Trip</span>
